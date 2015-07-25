@@ -1,13 +1,30 @@
+# Getting And Cleaning Data Course Project
+# 
+# You should create one R script called run_analysis.R that does the following.
+# 
+# 1 Merges the training and the test sets to create one data set. 
+# 
+# 2 Extracts only the measurements on the mean and standard deviation for each
+# measurement.
+# 
+# 3 Uses descriptive activity names to name the activities in the data set 
+# 
+# 4 Appropriately labels the data set with descriptive variable names.
+# 
+# 5 From the data set in step 4, creates a second, independent tidy data set
+# with the average of each variable for each activity and each subject.
+
+
+## Goals for Tidy Data
+## 1. Each variable forms a column
+## 
+## 2. Each observations forms a row
+## 
+## 3. Each table/file stores data about one kind of observation (e.g
+## people/hospitals)
+
 library(dplyr)
 library(reshape2)
-
-
-# Goals for Tidy Data
-# 1. Each variable forms a column
-# 
-# 2. Each observations forms a row
-# 
-# 3. Each table/file stores data about one kind of observation (e.g people/hospitals)
 
 #
 # Create data directory
@@ -17,13 +34,14 @@ if (!file.exists("data")) {
         dir.create("data")
 }
 
-
+##
 ## Get the Human Activity Recognition (HAR) Dataset
 ## Download using method = "curl"
+##
 src_file = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 dest_file = "./data/HAR.zip"
-# download.file(src_file, dest_file, method = "curl")
-# dateDownloaded <- date()
+download.file(src_file, dest_file, method = "curl")
+dateDownloaded <- date()
 
 ##
 ## Read data into memory. 
