@@ -14,6 +14,6 @@ Script that does the following:
     
 * Produced a new tidy data set with the average of each variable for each activity and each subject
 
-* Writes the new tidy data set to a file called "new_tidy_data.txt"
+* Writes the new tidy data set to a file called *new_tidy_data.txt*
 
    
