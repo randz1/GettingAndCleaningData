@@ -2,7 +2,13 @@
 
 ## Codebook from course project
 
-### Columns in data file * new_tidy_data.txt* 
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. 
+
+See `README.txt` and `features_info.txt` in https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip for more details. 
+
+### Columns in data file `new_tidy_data.txt` 
 
 #### ID Columns
 * **activity**
@@ -13,7 +19,7 @@
 #### Variables
 The following variables are encoded as:
 
-**time** : time domain signal
+**time** : time domain signal captured at a constant rate of 50 Hz
 
 **fft** : fast fourier transform applied to signal
 
@@ -32,6 +38,8 @@ The following variables are encoded as:
 **x, y, z** : measurement along x, y, z axis
 
 **jerk** : measurement jerk
+
+**mag** : magnitude of signal calculated using the Euclidean norm across x,y,z axes
 
 * time.body.acc-mean.x
 * time.body.acc-mean.y
@@ -99,3 +107,7 @@ The following variables are encoded as:
 * fft.body.gyro.mag-std 
 * fft.body.gyro.jerk.mag-mean 
 * fft.body.gyro.jerk.mag-std 
+
+### More information
+Check http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones for more information
+
