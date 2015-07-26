@@ -30,9 +30,9 @@ library(reshape2)
 # Create data directory
 #
 
-if (!file.exists("data")) {
-        dir.create("data")
-}
+# if (!file.exists("data")) {
+#         dir.create("data")
+# }
 
 ##
 ## Get the Human Activity Recognition (HAR) Dataset
