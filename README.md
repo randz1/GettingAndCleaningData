@@ -2,7 +2,7 @@
 
 ## Code from course project
 
-### *run_analysis.R*
+### `run_analysis.R`
 
 Script that does the following:
 
