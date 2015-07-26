@@ -18,4 +18,4 @@ Script that does the following:
 
 * Writes the new tidy data set to a file called *new_tidy_data.txt*
 
-   
+see `CodeBook.md` in this repository for more details   
