@@ -12,7 +12,9 @@ Script that does the following:
 
 * Extracts only the measurements on the mean and standard deviation for each measurement. 
     
-* Produced a new tidy data set with the average of each variable for each activity and each subject
+* Produces a new tidy data set with the average of each variable for each activity and each subject
+  * Using descriptive activity names to name the activities
+  * Using descriptive variable names
 
 * Writes the new tidy data set to a file called *new_tidy_data.txt*
 
