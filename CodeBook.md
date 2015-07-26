@@ -56,7 +56,7 @@ The following variables are encoded as:
 
 **jerk** : measurement jerk
 
-**mag** : magnitude of signal calculated using the Euclidean norm across x,y,z axes
+**mag** : magnitude of signal **calculated using the Euclidean norm**across x,y,z axes
 
 * time.body.acc-mean.x
 * time.body.acc-mean.y
