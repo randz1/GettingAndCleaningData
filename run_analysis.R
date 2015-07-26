@@ -38,49 +38,47 @@ if (!file.exists("data")) {
 ## Get the Human Activity Recognition (HAR) Dataset
 ## Download using method = "curl"
 ##
-src_file = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-dest_file = "./data/HAR.zip"
-download.file(src_file, dest_file, method = "curl")
-dateDownloaded <- date()
+# src_file = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+# dest_file = "./data/HAR.zip"
+# download.file(src_file, dest_file, method = "curl")
+# dateDownloaded <- date()
 
 ##
 ## Read data into memory. 
-## Use unz() for zipped files
+## Use unz() for zipped files if necessary
 ## 
 
 ## Activity and Feature Labels
-activity_labels <- read.table(unz(dest_file, 
-                                  "UCI HAR Dataset/activity_labels.txt"),
-                                  colClasses="character")[,2]
-feature_labels <- read.table(unz(dest_file, "UCI HAR Dataset/features.txt"), 
+activity_labels <- read.table("UCI HAR Dataset/activity_labels.txt", 
+                              colClasses="character")[,2]
+feature_labels <- read.table("UCI HAR Dataset/features.txt", 
                              colClasses="character")[,2]
 
 
 ## Training Data
-training_subjects <- read.table(unz(dest_file, 
-                                    "UCI HAR Dataset/train/subject_train.txt"),
-                                        col.names=c("subject"))
+training_subjects <- read.table("UCI HAR Dataset/train/subject_train.txt",
+                                col.names=c("subject"))
 
-training_data <- read.table(unz(dest_file, "UCI HAR Dataset/train/X_train.txt"),
-                                col.names=as.character(feature_labels))
+training_data <- read.table("UCI HAR Dataset/train/X_train.txt",
+                             col.names=as.character(feature_labels))
                             
-training_activity <- read.table(unz(dest_file,
-                                  "UCI HAR Dataset/train/y_train.txt"),
-                                        col.names=c("activity"))
+training_activity <- read.table("UCI HAR Dataset/train/y_train.txt",
+                                col.names=c("activity"))
 
+## Add the subject and activity columns to the training data
 training_data <- cbind(training_subjects, training_activity, training_data)
 
 ## Test Data
-test_subjects <- read.table(unz(dest_file, 
-                                "UCI HAR Dataset/test/subject_test.txt"),
-                                        col.names=c("subject"))
+test_subjects <- read.table("UCI HAR Dataset/test/subject_test.txt",
+                            col.names=c("subject"))
 
-test_data <- read.table(unz(dest_file, "UCI HAR Dataset/test/X_test.txt"),
-                                col.names=as.character(feature_labels))
+test_data <- read.table("UCI HAR Dataset/test/X_test.txt",
+                        col.names=as.character(feature_labels))
 
-test_activity <- read.table(unz(dest_file, "UCI HAR Dataset/test/y_test.txt"),
-                                col.names=c("activity"))
+test_activity <- read.table("UCI HAR Dataset/test/y_test.txt",
+                            col.names=c("activity"))
 
+## Add the subject and activity columns to the test data
 test_data <- cbind(test_subjects, test_activity, test_data)
                   
 ##
