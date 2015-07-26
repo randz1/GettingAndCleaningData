@@ -2,10 +2,13 @@
 
 ## Codebook from course project
 
-### Variables in data file *new_tidy_data.txt*
+### Columns in data file *new_tidy_data.txt*
 
+#### ID Columns
 "activity"
 "subject"
+
+#### Variables
 "time.body.acc-mean.x"
 "time.body.acc-mean.y"
 "time.body.acc-mean.z"
