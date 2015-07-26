@@ -6,9 +6,9 @@
 
 #### ID Columns
 * activity
-        * types of activities:(*WALKING*, *WALKING_UPSTAIRS*, *WALKING_DOWNSTAIRS*, *SITTING*, *STANDING*, *LAYING*)
+  * types of activities : (*WALKING*, *WALKING_UPSTAIRS*, *WALKING_DOWNSTAIRS*, *SITTING*, *STANDING*, *LAYING*)
 * subject
-        * subject identifier: (1 - 30)
+  * subject identifier : (1 - 30)
 
 #### Variables
 * time.body.acc-mean.x
