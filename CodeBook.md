@@ -44,9 +44,9 @@ The following variables are encoded as:
 
 **gravity** : measurement of gravity
 
-**acc** : measurement from accelerometer
+**acc** : measurement from accelerometer (**standard gravity units 'g'**)
 
-**gyro** : measurement from gyroscope
+**gyro** : measurement from gyroscope (**radians/second**)
 
 **mean** : measurement mean
 
