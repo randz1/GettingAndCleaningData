@@ -5,13 +5,14 @@
 ### Columns in data file * new_tidy_data.txt* 
 
 #### ID Columns
-* activity
+* **activity**
   * types of activities : (*WALKING*, *WALKING_UPSTAIRS*, *WALKING_DOWNSTAIRS*, *SITTING*, *STANDING*, *LAYING*)
-* subject
+* **subject**
   * subject identifier : (1 - 30)
 
 #### Variables
-The following variables are encoded as follows
+The following variables are encoded as:
+
 **time** : time domain signal
 **fft** : fast fourier transform applied to signal
 **body** : measurement of body
