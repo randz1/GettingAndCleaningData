@@ -14,14 +14,23 @@
 The following variables are encoded as:
 
 **time** : time domain signal
+
 **fft** : fast fourier transform applied to signal
+
 **body** : measurement of body
+
 **gravity** : measurement of gravity
+
 **acc** : measurement from accelerometer
+
 **gyro** : measurement from gyroscope
+
 **mean** : measurement mean
+
 **std** : measurement standard deviation
+
 **x, y, z** : measurement along x, y, z axis
+
 **jerk** : measurement jerk
 
 * time.body.acc-mean.x
