@@ -109,3 +109,4 @@ The following variables are encoded as:
 
 ### More information
 Check http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones for more information
+ 
